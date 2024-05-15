@@ -1,0 +1,51 @@
+<marquee>
+    welcome to mjcreations 
+</marquee>!
+<!DOCTYPE html> 
+<html lang="en">
+<head>     
+<meta charset="UTF-8">              
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>userform</title> 
+</head>
+<body>      
+<main>       
+<h2>contact form</h2> 
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <lebel for="">value1</lebel>
+                <input type="text" value={{n1}} name=num1 class="form-control"/>
+            </div>
+            <div>
+                <lebel for="">oprator</lebel>
+                <select name="opr" value=23 class="form-control">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            <botton>{{opr}}</botton>
+            </div>
+            <div>
+                <lebel for="">value2</lebel>
+                <input type="text" value={{n2}} name=num2 class="form-control"/>
+            </div>
+            <div>
+                <button type="submit">calculate</button>
+            </div>
+            <lebel> output </lebel>
+            <input type="text" value={{c}} class="form-control"/>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+

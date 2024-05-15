@@ -1,0 +1,14 @@
+{{newsdetail.news_title}}
+<div>{{newsdetail.news_desc |safe}}</div>
+<div class="col-6">
+    <img src="/media/{{newsdetail.news_image }}"/>
+</div>
+{{newsid}}
+<div class="row">
+    <div class="col-12">
+        <from method="get">
+            <input type="text" name="servicename" value="" />
+            <input type="submit"  value="search" />
+        </form>
+    </div>
+</div>

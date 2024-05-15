@@ -1,0 +1,50 @@
+<div> 
+    {% for n in newsd%}
+        {{n.news_title |safe}}
+        {{n.news_desc |safe}}
+    {% endfor%}
+</div>
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <div> 123</div>
+            <div> 
+            
+            <b>..</b>
+            {% if p1 != page_number %}
+              <button><a href="/page?pagenumb={{prev}}"> prev</a> </button>
+              {% for n in pp %}
+                <a href=/page?pagenumb={{n}}>{{n}}  </a>
+              {% endfor%}
+            {% endif %}
+            &nbsp;
+            <a style="background-color:red"><b> {{page_number}}   </b></a>&nbsp; 
+            {% for n in nn %}
+              <a href="/page?pagenumb={{n}}">{{n}}</a>
+            {% endfor%}
+            
+            <b> .. </b>
+            {% if page_number != totalpage %}  
+              <button><a href="/page?pagenumb={{next}}">next <a/></button>
+            {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!--<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </div>-->

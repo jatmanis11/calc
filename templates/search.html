@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <div> <input type="text" name="equalsearch"  /></div>
+            <div> <button type="submit"> equal search</button> </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <div> <input type="text" name="likesearch"  /></div>
+            <div> <button type="submit"> like search</button> </div>
+        </form>
+    </div>
+</div>
+
+{% for n in newsdetail %}
+    <div> <h1> {{n.news_title |safe }}  &nbsp; &nbsp;&nbsp;&nbsp; <h1> </div>
+    <div> {{n.news_desc | safe }}  </div>
+    <br>
+    <br>
+    <br>
+
+{% endfor%}
+

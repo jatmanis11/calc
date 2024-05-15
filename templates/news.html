@@ -1,0 +1,13 @@
+<marquee  onmouseover="stop()" onmouseout="start()" >
+    {% for n in newsdata %}
+        <a href="/newsdetails/{{n.news_slug}}"> {{n.news_title}}  &nbsp; &nbsp;&nbsp;&nbsp; </a>
+    {% endfor%}
+</marquee>
+<div class="row">
+    <div class="col-12">
+        <from method="get">
+            <input type="text" name="servicename" value="" />
+            <input type="submit"  value="search" />
+        </form>
+    </div>
+</div>

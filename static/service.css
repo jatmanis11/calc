@@ -1,0 +1,15 @@
+.service {
+    background-color: #eb2121;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #eb2121
+}
+
+.service p {
+    margin-bottom: 20px;
+}
